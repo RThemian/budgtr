@@ -8,5 +8,15 @@
   </head>
   <body>
     <h1>Form for creating a new budget record</h1>
+    <form action="/budgets" method="POST">
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" />
+      <label for="amount">Amount</label>
+      <input type="number" name="amount" id="amount" />
+      <!-- add when to the budget -->
+        <label for="when">When</label>
+        <input type="date" name="when" id="when" />
+    
+      <input type="submit" value="Create" />
   </body>
 </html>

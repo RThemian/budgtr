@@ -10,7 +10,6 @@
   "description": "## A simple budgeting app for the command line",
   "version": "1.0.0",
   "main": "server.js",
-  "devDependencies": {},
   "keywords": [],
   "author": "",
   "license": "ISC"

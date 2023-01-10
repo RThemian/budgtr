@@ -4,24 +4,29 @@ const app = express();
 // Set the view engine to EJS
 app.set("view engine", "ejs");
 
-// Index route
-app.get("/budgets", (req, res) => {
-  res.render("budgets/index");
-});
-
 // Show route
 app.get("/budgets/:index", (req, res) => {
-  res.render("budgets/show", { index: req.params.index });
+  res.render("show.ejs", { index: req.params.index });
 });
 
 // New route
-app.get("/budgets/new", (req, res) => {
-  res.render("budgets/new");
+app.get("/create/new", (req, res) => {
+  res.render("new.ejs");
 });
 
 // Create route
-app.post("/budgets", (req, res) => {
-  res.render("budgets/create");
+app.post("/create", (req, res) => {
+  res.render("create.ejs");
+});
+
+// Index route
+app.get("/budgets", (req, res) => {
+  res.render("index.ejs");
+});
+
+// home page
+app.get("/", (req, res) => {
+  res.render("home.ejs");
 });
 
 app.listen(3000, () => {
